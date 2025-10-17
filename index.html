@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smart Emergency Alert Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Demo mode: Hardware integration will replace simulated alerts -->
+   
+  <!--  Header -->
+  <div class="navbar">
+    <div class="logo">&#9888;</div>
+    <h1>Smart Emergency Response Dashboard</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-grid">
+    
+    <!-- LEFT: Map -->
+    <div id="map">
+      <!-- temporary map given remove it when using  -->
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.2053602121605!2d74.56371107412663!3d16.766455520397894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11f14611e10f5%3A0xea59834055bef319!2sDr.%20J.%20J.%20Magdum%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1759683001645!5m2!1sen!2sin" 
+           width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" >
+          </iframe>
+    </div>
+
+    <!-- RIGHT: Alerts + Stats -->
+    <div class="alert-section">
+      <div class="stats-container">
+        <div class="stat-card"><small>Active</small><div id="active" class="stat-val">0</div></div>
+        <div class="stat-card"><small>Resolved</small><div id="resolved" class="stat-val">0</div></div>
+        <div class="stat-card"><small>Last Alert</small><div id="last" class="stat-val">—</div></div>
+        <button id="triggerBtn" class="btn-trigger">🔔 Trigger Alert</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>#</th><th>Device</th><th>Time</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody id="alertBody"><tr><td colspan="5">No alerts yet</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!--Scripts-->
+    <!-- temporary disabled  for the demo-->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script> -->
+  <script src="script.js"></script>
+
+
+</body>
+</html>
+
+
